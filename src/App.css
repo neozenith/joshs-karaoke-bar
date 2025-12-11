@@ -1,0 +1,52 @@
+/* Custom styles for Josh's Karaoke Bar */
+/* Most styling is handled by Tailwind CSS and shadcn/ui components */
+
+#root {
+  min-height: 100vh;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Logo animation - alternates between pulse (0s, 16s, 32s...) and spin (8s, 24s, 40s...) */
+@keyframes logoAnimation {
+  /* Pulse animation at 0s (16s, 32s, etc.) - fast double pulse at 180 BPM */
+  0% {
+    transform: scale(1) rotateY(0deg);
+  }
+  1.5% {
+    transform: scale(1.2) rotateY(0deg);
+  }
+  3% {
+    transform: scale(1) rotateY(0deg);
+  }
+  4.5% {
+    transform: scale(1.2) rotateY(0deg);
+  }
+  6% {
+    transform: scale(1) rotateY(0deg);
+  }
+
+  /* Idle state */
+  6%, 50% {
+    transform: scale(1) rotateY(0deg);
+  }
+
+  /* Spin animation at 8s (50% of 16s cycle) - double rotation */
+  50%, 53.125% {
+    transform: scale(1) rotateY(0deg);
+  }
+  59.375% {
+    transform: scale(1) rotateY(720deg);
+  }
+  62.5%, 100% {
+    transform: scale(1) rotateY(720deg);
+  }
+}
+
+.logo-spin {
+  animation: logoAnimation 16s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
