@@ -4,9 +4,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   // Set base path for GitHub Pages deployment
-  base: process.env.NODE_ENV === 'production' ? '/joshs-karaoke-bar/' : '/',
+  // Use '/' for dev server, '/joshs-karaoke-bar/' for production builds
+  base: command === 'build' ? '/joshs-karaoke-bar/' : '/',
   plugins: [
     tailwindcss(),
     react(),
@@ -20,4 +21,4 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
   },
-})
+}))

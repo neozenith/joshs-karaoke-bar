@@ -11,7 +11,7 @@ function App() {
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <img
-              src="/logo-final.png"
+              src={`${import.meta.env.BASE_URL}logo-final.png`}
               alt="Josh's Karaoke Bar"
               className="h-12 w-12 md:h-14 md:w-14 object-contain"
             />
@@ -32,7 +32,7 @@ function App() {
         <div className="container mx-auto text-center">
           <div className="flex justify-center mb-4">
             <img
-              src="/logo-final.png"
+              src={`${import.meta.env.BASE_URL}logo-final.png`}
               alt="Josh's Karaoke Bar Logo"
               className="h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 object-contain animate-in fade-in zoom-in duration-500 logo-spin"
             />
@@ -75,7 +75,7 @@ function App() {
           </div>
           <div className="relative rounded-xl overflow-hidden shadow-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300">
             <img
-              src="/Gemini_Generated_Image_d2o0gd2o0gd2o0gd.png"
+              src={`${import.meta.env.BASE_URL}Gemini_Generated_Image_d2o0gd2o0gd2o0gd.png`}
               alt="Josh's Karaoke Bar - Melbourne laneway exterior and vibrant interior with people enjoying Japanese food and karaoke"
               className="w-full h-auto object-cover"
             />
@@ -274,7 +274,7 @@ function App() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <img
-                  src="/logo-final.png"
+                  src={`${import.meta.env.BASE_URL}logo-final.png`}
                   alt="Josh's Karaoke Bar"
                   className="h-12 w-12 object-contain"
                 />
